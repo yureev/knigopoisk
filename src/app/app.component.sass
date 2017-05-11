@@ -1,0 +1,75 @@
+@mixin clearfix()
+  &:before, &:after
+    content: ""
+    display: table
+
+  &:after
+    clear: both
+
+
+.wrapper
+  min-height: 100%
+  overflow: hidden
+  position: relative
+
+  .header
+    padding: 0 15px 10px
+    font-family: Tahoma, Verdana, Arial serif
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#b6b6b6+0,b6b6b6+0,c9c9c9+100,c9c9c9+100,c9c9c9+100 */
+    background: #b6b6b6 /* Old browsers */
+    background: -moz-linear-gradient(top,  #b6b6b6 0%, #b6b6b6 0%, #c9c9c9 100%, #c9c9c9 100%, #c9c9c9 100%) /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #b6b6b6 0%,#b6b6b6 0%,#c9c9c9 100%,#c9c9c9 100%,#c9c9c9 100%) /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #b6b6b6 0%,#b6b6b6 0%,#c9c9c9 100%,#c9c9c9 100%,#c9c9c9 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b6b6b6', endColorstr='#c9c9c9',GradientType=0 ) /* IE6-9 */
+    background-color: transparent
+    @include clearfix()
+
+
+    .header__logo
+      float: left
+      .logo
+        display: inline-block
+
+        .logo__pic
+          display: block
+          max-width: 180px
+          max-height: 70px
+
+    .container
+      float: right
+      .header__menu
+        .menu
+          height: 20px
+          @include clearfix()
+
+          .menu__item
+            border-left: 2px solid #ff6611
+            float: left
+            margin-right: 30px
+            padding-left: 5px
+            .menu__link-text
+              color: #fff
+              font-size: 10px
+              font-weight: 600
+
+      .header__search
+        .search
+          @include clearfix()
+          .search__item
+            float: left
+            .search__input
+              outline: none
+              padding: 5px
+              width: 280px
+
+.empty
+  height: 258px
+
+.footer
+  position: relative
+  background-color: #323231
+  margin-top: -258px
+  height: 258px
+  .footer__copyright
+    color: #999
+
