@@ -6,7 +6,6 @@
   &:after
     clear: both
 
-
 .wrapper
   min-height: 100%
   overflow: hidden
@@ -102,8 +101,6 @@
             .nav__link_table
               left: -105px !important
 
-
-
       .header__search
         font-family: Tahoma, Verdana, Arial, serif
         .search
@@ -126,13 +123,6 @@
               margin-left: 50px
               margin-right: 40px
 
-            .button__search
-              background-color: #e5e0cf
-              outline: none
-
-            .button_first
-              width: 85px
-
             .search__up, .search__down
               @include clearfix()
               width: 100%
@@ -152,6 +142,28 @@
 
           .search__item:nth-child(2)
             margin-right: 15px
+
+          .search__item_button, .search__item_button
+            position: relative
+
+            .button__search
+              position: absolute
+              top: -10px
+              background-color: #ece9d8
+              outline: none
+              font-size: 11px
+              color: #333333
+              border: 1px #fff outset
+
+              &:active
+                margin: 1px 0 0 1px
+
+            .button_first
+              left: 0
+              width: 83px
+
+            .button_second
+              left: 81px
 
 .empty
   height: 258px
