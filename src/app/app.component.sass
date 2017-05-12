@@ -18,10 +18,12 @@
     @include clearfix()
     font-family: Tahoma, Verdana, serif
     font-size: 10px
-    padding: 0 15px 5px
+    padding-bottom: 5px
 
     .header__logo
       float: left
+      width: 210px
+      margin-left: 15px
       .logo
         display: inline-block
 
@@ -31,9 +33,9 @@
           max-height: 70px
 
     .container
-      float: right
-      .header__menu
-        .menu
+      float: left
+      .nav
+        .nav_list
           height: 20px
           text-align: justify
           @include clearfix()
@@ -45,20 +47,20 @@
             height: 0
             width: 100%
 
-          .menu__item
+          .nav__item
             border-left: 2px solid #ff6611
             display: inline-block
-            margin-right: 25px
+            margin-right: 20px
             padding: 5px 0 0 5px
 
-            .menu__link
+            .nav__link
               position: relative
 
-              .menu__link-text
+              .nav__link-text
                 color: #fff
                 font-weight: 600
 
-              .menu__link-caret
+              .nav__link-caret
                 color: #ddd
                 display: none
                 font-size: 12px
@@ -66,7 +68,7 @@
                 right: -18px
                 top: 2px
 
-              .menu__link_table
+              .nav__link_table
                 background: #f2f2f2
                 width: 180px
                 border: 1px solid #dedfde
@@ -75,29 +77,29 @@
                 top: 20px
                 left: -7px
 
-                .menu__link_table__item
+                .nav__link_table__item
                   border-bottom: 1px solid #dedfde
                   padding: 5px
                   font-size: 9px
                   color: #ff6611
                   list-style: square inside
 
-                  .menu__link_table__item_link
+                  .nav__link_table__item_link
                     color: #626262
 
-                .menu__link_table__item:last-child
+                .nav__link_table__item:last-child
                   border-bottom: none
 
               &:hover
-                .menu__link-caret
+                .nav__link-caret
                   display: block
 
               &:active
-                .menu__link_table
+                .nav__link_table
                   display: block
 
-          .menu__item:last-child
-            .menu__link_table
+          .nav__item:last-child
+            .nav__link_table
               left: -105px !important
 
 
@@ -121,7 +123,7 @@
               font-size: 11px
               font-weight: 600
               color: #dddddd
-              margin-left: -40px
+              margin-left: 50px
               margin-right: 40px
 
             .button__search
